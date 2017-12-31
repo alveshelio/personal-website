@@ -1,0 +1,10 @@
+{
+  "labels": {
+    "aboutMe": "Who am I?",
+    "mySkills": "My Skills: "
+  },
+  "description": {
+    "aboutMe": "I'm Helio, I arrived in Quebec in 2006 and I felt in love with its people, its culture and I've decided to make my life here.",
+    "mySkills": "I'm a JavaScript Full Stack. I like to work with React/Redux and Node/Express."
+  }
+}

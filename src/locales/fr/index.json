@@ -1,0 +1,10 @@
+{
+  "userInfo": {
+    "labels": {
+      "aboutMe": "Qui suis-je?",
+      "skills": "Mes compétences:"
+    },
+    "header": "Bonjour, mon nom est Helio et je suis un Développeur Fullstack JavaScript",
+    "skills": "React/Redux - Node/Express - Pensée Critique."
+  }
+}
