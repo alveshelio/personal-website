@@ -1,0 +1,12 @@
+.OuterContainer {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    'header'
+    'content'
+    'footer';
+}
+
+.ContentContainer {
+  grid-area: content;
+}

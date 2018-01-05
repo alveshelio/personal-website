@@ -1,0 +1,16 @@
+@import '../../../styles/variables';
+
+.Hero {
+  display: grid;
+  grid-column: main;
+  grid-row: hero-start / hero-end;
+  height: calc(100vh - #{$header-height});
+  z-index: 40;
+  align-items: center;
+}
+
+.HeroContent {
+  width: 100vw;
+  padding: 20px;
+  height: $hero-content-height;
+}

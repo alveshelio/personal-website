@@ -1,0 +1,23 @@
+@import '../../styles/variables';
+
+.Header {
+  background-color: #81a2be;
+  display: flex;
+  grid-column: main;
+  grid-row: header;
+  height: $header-height;
+  justify-content: space-between;
+  padding: 20px 20px 0;
+  z-index: 50;
+}
+
+.LogoWrapper {
+  height: $header-height;
+  width: 50%;
+}
+
+.MenuWrapper {
+  height: $header-height;
+  text-align: right;
+  width: 50%;
+}

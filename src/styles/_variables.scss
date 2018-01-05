@@ -1,0 +1,15 @@
+/* Header */
+$header-height: 20vh;
+$hero-height: calc(100vh - #{$header-height});
+$hero-content-height: calc(#{$hero-height} / 2.5);
+
+
+/* Media Queries */
+$phone-upper-boundary: 600px;
+$phone: 600;
+$tablet-portrait-upper-boundary: 900px;
+$tablet: 900;
+$tablet-landscape-upper-boundary: 1200px;
+$tablet-landscape: 1200;
+$desktop-upper-boundary: 1800px;
+$desktop: 1800;

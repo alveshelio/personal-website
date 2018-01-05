@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+.OuterContainer {
+  display: grid;
+  grid-template-columns: [main-start content-start] 1fr [content-end main-end];
+  grid-template-rows: [main-start header-start] auto [header-end hero-start] auto [ hero-end content-start] auto [content-end] auto [main-end];
+}

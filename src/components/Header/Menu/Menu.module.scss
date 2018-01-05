@@ -1,0 +1,26 @@
+@import '../../../styles/variables';
+@import '../../../styles/utils';
+@import '../../../styles/mediaQueries';
+
+.MenuContainer {
+  grid-area: menuContainer;
+}
+
+.Menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Menu li {
+  margin: 35px 0;
+}
+
+.MenuItem {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: get-vw(46px, $phone);
+  height: 100%;
+  text-decoration: none;
+  text-transform: uppercase;
+}

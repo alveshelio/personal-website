@@ -3,6 +3,27 @@ const path = require("path");
 const _ = require("lodash");
 const webpackLodashPlugin = require("lodash-webpack-plugin");
 
+// Implement the Gatsby API “onCreatePage”. This is
+// called after every page is created.
+exports.onCreatePage = async ({ page, boundActionCreators }) => {
+  const { createPage } = boundActionCreators;
+
+  return new Promise((resolve, reject) => {
+    if (page.path.match(/^\/landing-page/)) {
+      // It's assumed that `landingPage.js` exists in the `/layouts/` directory
+      page.layout = "landingPage";
+
+      // Update the page.
+      createPage(page);
+    }
+    if (page.path.match(/^\/projects\/*/)) {
+      page.layout = 'projectsPage'
+    }
+
+    resolve();
+  });
+};
+
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators;
   let slug;

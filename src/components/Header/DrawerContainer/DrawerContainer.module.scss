@@ -1,0 +1,15 @@
+.DrawerContainer {
+  display: grid;
+  grid-template-areas:
+    'closeContainer'
+    'menuContainer'
+    'socialContainer'
+    'contactContainer';
+  padding: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10vh 50vh 10vh 30vh;
+}
+
+.CloseButtonContainer {
+  grid-area: closeContainer;
+}

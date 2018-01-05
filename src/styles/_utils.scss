@@ -1,0 +1,6 @@
+@import './variables';
+
+@function get-vw($target, $max-breakpoint) {
+  $vw-context: ($max-breakpoint * 0.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}

@@ -2,9 +2,12 @@ import React from "react";
 import Helmet from "react-helmet";
 
 import styles from './Layout.module.scss';
+import Header from '../components/Header/Header';
+import Hero from '../components/Header/Hero/Hero';
+import Footer from '../components/Footer/Footer';
 import config from "../../data/SiteConfig";
 
-export default class MainLayout extends React.Component {
+export default class LandingPageLayout extends React.Component {
   getLocalTitle() {
     function capitalize(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
@@ -48,7 +51,11 @@ export default class MainLayout extends React.Component {
           <meta name="description" content={config.siteDescription} />
         </Helmet>
         <div className={styles.OuterContainer}>
-          {children()}
+          <h1>This is the ProjectsPage Layout</h1>
+          <main className={styles.ContentContainer}>
+            {children()}
+          </main>
+          <Footer config={config} />
         </div>
       </div>
     );

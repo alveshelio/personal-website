@@ -2,7 +2,10 @@
 /* eslint import/extensions:"off" */
 /* eslint global-require:"off" */
 import React from "react";
+import { TypographyStyle, GoogleFont } from 'react-typography';
+
 import favicon from "./favicon.png";
+import typography from './utils/typography';
 
 let inlinedStyles = "";
 if (process.env.NODE_ENV === "production") {
@@ -29,6 +32,8 @@ export default class HTML extends React.Component {
     return (
       <html lang="en">
         <head>
+          <TypographyStyle typography={typography} />
+          <GoogleFont typography={typography} />
           <meta charSet="utf-8" />
           <meta
             name="viewport"

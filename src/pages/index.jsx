@@ -1,37 +1,42 @@
-import React from 'react';
+import React, { Component, Fragment} from 'react';
 import Helmet from 'react-helmet';
 import { translate } from 'react-i18next';
 
+import 'font-awesome/css/font-awesome.min.css';
+import styles from './index.module.scss';
 import '../components/i18n/i18n';
-import PostListing from '../components/PostListing/PostListing';
 import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
-import LanguageSwitcher from '../components/i18n/LanguageSwitcher';
+import Header from '../components/Header/Header';
+import Hero from '../components/Header/Hero/Hero';
 import Footer from '../components/Footer/Footer';
+import LanguageSwitcher from '../components/i18n/LanguageSwitcher';
 
-class Index extends React.Component {
+class Index extends Component {
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     const { t } = this.props;
     return (
-      <div className='index-container'>
+      <Fragment>
         <Helmet title={config.siteTitle} />
         <SEO postEdges={postEdges} />
+        <Header />
+        <Hero header='Hero' tagline='This is the hero tagline' bgColor='red' />
         <LanguageSwitcher />
-        <PostListing postEdges={postEdges} />
-        <p>
-          {t('userInfo.labels.aboutMe')}: {t('userInfo.header')}
-        </p>
-        <p>
-          {t('userInfo.labels.skills')}: {t('userInfo.skills')}
-        </p>
+        <main className={styles.ContentContainer}>
+          <p>
+            {t('userInfo.labels.aboutMe')}: {t('userInfo.header')}
+          </p>
+          <p>
+            {t('userInfo.labels.skills')}: {t('userInfo.skills')}
+          </p>
+        </main>
         <Footer config={config} />
-      </div>
+      </Fragment>
     );
   }
 }
 
-// export default Index;
 export default translate('index')(Index);
 
 /* eslint no-undef: "off"*/
