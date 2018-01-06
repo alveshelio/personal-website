@@ -22,8 +22,8 @@ class Index extends Component {
         <SEO postEdges={postEdges} />
         <Header />
         <Hero header='Hero' tagline='This is the hero tagline' bgColor='red' />
-        <LanguageSwitcher />
         <main className={styles.ContentContainer}>
+          <LanguageSwitcher />
           <p>
             {t('userInfo.labels.aboutMe')}: {t('userInfo.header')}
           </p>

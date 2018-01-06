@@ -1,9 +1,8 @@
 import Typography from 'typography'
 import sutroTheme from 'typography-theme-sutro'
 
-sutroTheme.bodyFontFamily = ['Montserrat', 'sans-serif' ].join(' ');
-sutroTheme.baseFontSize = '24px';
-// sutroTheme.overrideThemeStyles = () => ();
+sutroTheme.bodyFontFamily = ['Montserrat', 'sans-serif' ];
+// sutroTheme.baseFontSize = '24px';
 
 const typography = new Typography(sutroTheme, {
   googleFonts: [
