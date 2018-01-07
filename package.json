@@ -34,6 +34,7 @@
     "i18next": "^10.2.1",
     "i18next-browser-languagedetector": "^2.1.0",
     "i18next-xhr-backend": "^1.5.0",
+    "imports-loader": "^0.7.1",
     "lodash": "^4.17.4",
     "lodash-webpack-plugin": "^0.11.4",
     "prop-types": "^15.6.0",
@@ -43,6 +44,7 @@
     "react-helmet": "^5.2.0",
     "react-i18next": "^7.3.0",
     "react-motion-drawer": "^2.1.7",
+    "react-router-dom": "^4.2.2",
     "react-share": "^1.18.1",
     "react-twitter-widgets": "^1.7.1",
     "react-typography": "^0.16.5",
@@ -51,6 +53,13 @@
     "typography-theme-sutro": "^0.15.10"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.3.3",
+    "@storybook/addon-knobs": "^3.3.3",
+    "@storybook/addon-links": "^3.3.3",
+    "@storybook/addon-notes": "^3.3.3",
+    "@storybook/addon-options": "^3.3.3",
+    "@storybook/react": "^3.3.3",
+    "babel-eslint": "^8.1.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "cli-glob": "^0.1.0",
     "eslint": "^4.14.0",
@@ -64,6 +73,8 @@
     "prettier": "^1.9.2",
     "remark-cli": "^4.0.0",
     "remark-preset-lint-recommended": "^3.0.1",
+    "storybook-react": "^3.2.16",
+    "storybook-readme": "^3.2.0",
     "stylefmt": "^6.0.0",
     "stylelint": "^8.4.0",
     "stylelint-config-standard": "^18.0.0",
@@ -85,7 +96,9 @@
     "lint:js": "eslint --ext .js,.jsx --ignore-pattern public,static .",
     "lint:md": "remark content/posts/",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
-    "format:js": "prettier '**/*.{js,jsx}' --write"
+    "format:js": "prettier '**/*.{js,jsx}' --write",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook:build": "build-storybook -c .storybook -o public/docs"
   },
   "remarkConfig": {
     "plugins": [
